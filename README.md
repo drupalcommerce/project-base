@@ -1,13 +1,10 @@
-# Composer template for Drupal projects
+# Commerce 2.x project template
 
-[![Build Status](https://travis-ci.org/drupal-composer/drupal-project.svg?branch=8.x)](https://travis-ci.org/drupal-composer/drupal-project)
+[![Build Status](https://travis-ci.org/drupalcommerce/project-base.svg?branch=8.x)](https://travis-ci.org/drupalcommerce/project-base)
 
-This project template should provide a kickstart for managing your site
-dependencies with [Composer](https://getcomposer.org/).
+Use [Composer](https://getcomposer.org/) to get Drupal + Commerce 2.x with all dependencies.
 
-If you want to know how to use it as replacement for
-[Drush Make](https://github.com/drush-ops/drush/blob/master/docs/make.md) visit
-the [Documentation on drupal.org](https://www.drupal.org/node/2471553).
+Based on [drupal-composer/drupal-project](github.com/drupal-composer/drupal-project).
 
 ## Usage
 
@@ -19,30 +16,26 @@ You might need to replace `composer` with `php composer.phar` (or similar) for y
 After that you can create the project:
 
 ```
-composer create-project drupal-composer/drupal-project:8.x-dev some-dir --stability dev --no-interaction
+composer create-project drupalcommerce/project-base some-dir --stability dev --no-interaction
 ```
 
-With `composer require ...` you can download new dependencies to your installation.
+Done! Use `composer require ...` to download additional modules and themes:
 
 ```
 cd some-dir
-composer require drupal/devel:8.*
+composer require "drupal/devel:8.1.x-dev"
 ```
 
 ## What does the template do?
 
-When installing the given `composer.json` some tasks are taken care of:
-
-* Drupal will be installed in the `web`-directory.
-* Autoloader is implemented to use the generated composer autoloader in `vendor/autoload.php`,
-  instead of the one provided by Drupal (`web/vendor/autoload.php`).
-* Modules (packages of type `drupal-module`) will be placed in `web/modules/contrib/`
-* Theme (packages of type `drupal-theme`) will be placed in `web/themes/contrib/`
-* Profiles (packages of type `drupal-profile`) will be placed in `web/profiles/contrib/`
+* Drupal is installed in the `web` directory.
+* Modules (packages of type `drupal-module`) are placed in `web/modules/contrib/`
+* Theme (packages of type `drupal-theme`) are placed in `web/themes/contrib/`
+* Profiles (packages of type `drupal-profile`) are placed in `web/profiles/contrib/`
 * Creates default writable versions of `settings.php` and `services.yml`.
-* Creates `sites/default/files`-directory.
-* Latest version of drush is installed locally for use at `vendor/bin/drush`.
-* Latest version of DrupalConsole is installed locally for use at `vendor/bin/console`.
+* Creates the `sites/default/files` directory.
+* Latest version of Drush is installed locally for use at `vendor/bin/drush`.
+* Latest version of DrupalConsole is installed locally for use at `vendor/bin/drupal`.
 
 ## Updating Drupal Core
 
@@ -58,13 +51,6 @@ Updating Drupal core is a two-step process.
    customizations to `.htaccess` or `robots.txt`.
 1. Commit everything all together in a single commit, so `web` will remain in
    sync with the `core` when checking out branches or running `git bisect`.
-
-## Generate composer.json from existing project
-
-With using [the "Composer Generate" drush extension](https://www.drupal.org/project/composer_generate)
-you can now generate a basic `composer.json` file from an existing project. Note
-that the generated `composer.json` might differ from this project's file.
-
 
 ## FAQ
 

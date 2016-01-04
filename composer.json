@@ -1,6 +1,6 @@
 {
-    "name": "drupal-composer/drupal-project",
-    "description": "Project template for Drupal 8 projects with composer",
+    "name": "drupalcommerce/project-base",
+    "description": "Commerce 2.x project template",
     "type": "project",
     "license": "GPL-2.0+",
     "authors": [
@@ -20,7 +20,13 @@
         "cweagans/composer-patches": "~1.0",
         "drupal/core": "8.0.*",
         "drush/drush": "~8.0",
-        "drupal/console": "~0.9"
+        "drupal/console": "~0.9",
+        "drupal/address": "8.1.x-dev",
+        "drupal/entity": "8.1.x-dev",
+        "drupal/inline_entity_form": "8.1.x-dev",
+        "drupal/profile": "8.1.x-dev",
+        "drupal/state_machine": "8.1.x-dev",
+        "drupal/commerce": "8.2.x-dev"
     },
     "require-dev": {
         "behat/mink": "~1.6",
