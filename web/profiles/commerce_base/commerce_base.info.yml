@@ -1,0 +1,18 @@
+name: Drupal Commerce Base
+type: profile
+description: Basic Drupal Commerce sites
+exclusive: 1
+dependencies:
+  - entity
+  - profile
+  - inline_entity_form
+  - state_machine
+  - commerce
+  - commerce_store
+  - commerce_order
+  - commerce_product
+  - commerce_price
+  - commerce_cart
+themes:
+  - bartik
+  - seven

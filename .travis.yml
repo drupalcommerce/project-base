@@ -7,7 +7,9 @@ php:
 sudo: false
 
 env:
-  - SIMPLETEST_DB=sqlite://tmp/site.sqlite
+  global:
+    - SIMPLETEST_DB=sqlite://tmp/site.sqlite
+    # - SIMPLETEST_BASE_URL=http://localhost:8080
 
 before_install:
   - echo 'sendmail_path = /bin/true' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
@@ -24,8 +26,10 @@ script:
   - ./../vendor/bin/drush site-install --verbose --yes --db-url=sqlite://tmp/site.sqlite
   # Skip core/tests/Drupal/Tests/ComposerIntegrationTest.php because web/ has no composer.json
   - ./../vendor/bin/phpunit -c core --exclude-group Composer
-  - ./../vendor/bin/drush
-  - ./../vendor/bin/drupal
+  - ./../vendor/bin/drush --version
+  - ./../vendor/bin/drupal --version
+  # Exit if the install profile didn't default.
+  - ./../vendor/bin/drush status || grep -q "commerce_base" || exit 1;
 
   # Test dev release
   - cd $TRAVIS_BUILD_DIR
@@ -35,5 +39,7 @@ script:
   - ./../vendor/bin/drush site-install --verbose --yes --db-url=sqlite://tmp/site.sqlite
   # Skip core/tests/Drupal/Tests/ComposerIntegrationTest.php because web/ has no composer.json
   - ./../vendor/bin/phpunit -c core --exclude-group Composer
-  - ./../vendor/bin/drush
-  - ./../vendor/bin/drupal
+  - ./../vendor/bin/drush --version
+  - ./../vendor/bin/drupal --version
+  # Exit if the install profile didn't default.
+  - drush status || grep -q "commerce_base" || exit 1;
