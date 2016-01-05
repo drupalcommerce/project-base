@@ -1,7 +1,9 @@
-name: Drupal Commerce Base
+name: Commerce Base
 type: profile
-description: Basic Drupal Commerce sites
-exclusive: 1
+core: 8.x
+description: 'Install with Drupal Commerce pre-configured.'
+distribution:
+  name: 'Drupal'
 dependencies:
   # Standard
   - node
@@ -40,16 +42,18 @@ dependencies:
   - automated_cron
 
   # Commerce
+  - address
   - entity
   - profile
   - inline_entity_form
   - state_machine
   - commerce
-  - commerce_store
+  - commerce_cart
   - commerce_order
   - commerce_product
   - commerce_price
-  - commerce_cart
+  - commerce_store
+  - commerce_tax
 themes:
   - bartik
   - seven
