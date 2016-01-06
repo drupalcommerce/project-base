@@ -13,6 +13,10 @@
         {
             "type": "composer",
             "url": "https://packagist.drupal-composer.org"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/drupalcommerce/commerce_base"
         }
     ],
     "require": {
@@ -26,7 +30,8 @@
         "drupal/inline_entity_form": "8.1.x-dev",
         "drupal/profile": "8.1.x-dev",
         "drupal/state_machine": "8.1.x-dev",
-        "drupal/commerce": "8.2.x-dev"
+        "drupal/commerce": "8.2.x-dev",
+        "drupalcommerce/commerce-base": "dev-8.x-1.x"
     },
     "require-dev": {
         "behat/mink": "~1.6",
