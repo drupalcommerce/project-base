@@ -3,10 +3,12 @@
  * @file
  * Platform.sh example settings.php file for Drupal 8.
  */
+
 // Install with the 'standard' profile for this example.
-$settings['install_profile'] = 'standard';
+$settings['install_profile'] = 'commerce_base';
 // You should modify the hash_salt so that it is specific to your application.
 $settings['hash_salt'] = '4946c1912834b8477cc70af309a2c30dcec24c2103c724ff30bf13b4c10efd82';
+
 /**
  * Default Drupal 8 settings.
  *
@@ -19,11 +21,13 @@ $databases = array();
 $config_directories = array();
 $settings['update_free_access'] = FALSE;
 $settings['container_yamls'][] = __DIR__ . '/services.yml';
+
 // Override paths for config files in Platform.sh.
 // Define a config sync directory outside the document root.
 if (isset($_ENV['PLATFORM_APP_DIR'])) {
   $config_directories[CONFIG_SYNC_DIRECTORY] = $_ENV['PLATFORM_APP_DIR'] . '/config/sync';
 }
+
 // Set trusted hosts based on real Platform.sh routes.
 if (isset($_ENV['PLATFORM_ROUTES'])) {
   $routes = json_decode(base64_decode($_ENV['PLATFORM_ROUTES']), TRUE);
@@ -84,8 +88,10 @@ if (getenv("PLATFORM_RELATIONSHIPS")) {
   ini_set('pcre.backtrack_limit', 200000);
   ini_set('pcre.recursion_limit', 200000);
 }
+
 // Force Drupal not to check for HTTP connectivity until we fixed the self test.
 $conf['drupal_http_request_fails'] = FALSE;
+
 // Local settings. These allow local development environments to use their own
 // database connections rather than the Platform-only settings above.
 if (file_exists(__DIR__ . '/settings.local.php')) {
