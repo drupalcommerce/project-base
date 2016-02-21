@@ -21,10 +21,11 @@
     ],
     "require": {
         "composer/installers": "^1.0.20",
+        "drupal-composer/drupal-scaffold": "~1",
         "cweagans/composer-patches": "~1.0",
         "drupal/core": "8.0.*",
         "drush/drush": "~8.0",
-        "drupal/console": "~0.9",
+        "drupal/console": "~0.10",
         "drupal/address": "8.1.x-dev",
         "drupal/entity": "8.1.x-dev",
         "drupal/inline_entity_form": "8.1.x-dev",
@@ -37,14 +38,18 @@
         "behat/mink": "~1.6",
         "behat/mink-goutte-driver": "~1.2",
         "jcalderonzumba/gastonjs": "^1.1@dev",
-        "jcalderonzumba/mink-phantomjs-driver": "dev-master#10d7c48c9a4129463052321b52450d98983c4332",
+        "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
         "mikey179/vfsStream": "~1.2",
         "phpunit/phpunit": "~4.8",
         "symfony/css-selector": "2.7.*"
     },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "scripts": {
+        "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
         "post-install-cmd": "sh ./scripts/composer/post-install.sh"
     },
     "extra": {
