@@ -31,7 +31,7 @@
         "drupal/profile": "8.1.x-dev",
         "drupal/state_machine": "8.1.x-dev",
         "drupal/commerce": "8.2.x-dev",
-        "drupalcommerce/commerce-base": "dev-8.x-1.x"
+        "drupalcommerce/commerce_base": "dev-8.x-1.x"
     },
     "require-dev": {
         "behat/mink": "~1.6",
