@@ -26,7 +26,7 @@
         "drupal/core": "8.0.x-dev",
         "drupal/console": "~0.10",
         "drupal/address": "8.1.x-dev",
-        "drupal/entity": "8.1.x-dev",
+        "drupal/entity": "8.0.x-dev",
         "drupal/inline_entity_form": "8.1.x-dev",
         "drupal/profile": "8.1.x-dev",
         "drupal/state_machine": "8.1.x-dev",
