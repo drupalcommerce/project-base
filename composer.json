@@ -20,6 +20,7 @@
         }
     ],
     "require": {
+        "ext-curl": "*",
         "composer/installers": "^1.0.20",
         "drupal-composer/drupal-scaffold": "~1",
         "cweagans/composer-patches": "~1.0",
