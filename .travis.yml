@@ -33,6 +33,6 @@ script:
   - ./../vendor/bin/drupal server 127.0.0.1:8080 &
   - sleep 3
   # Skip core/tests/Drupal/Tests/ComposerIntegrationTest.php because web/ has no composer.json
-  - ./../vendor/bin/phpunit -c core --exclude-group Composer
+  - ./../vendor/bin/phpunit -c core --testsuite unit --exclude-group Composer
   # Exit if the install profile didn't default.
   - ./../vendor/bin/drupal site:status || grep -q "commerce_base" || exit 1;
