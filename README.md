@@ -24,7 +24,7 @@ Done! Use `composer require ...` to download additional modules and themes:
 
 ```
 cd some-dir
-composer require "drupal/devel:8.1.x-dev"
+composer require "drupal/devel:1.x-dev"
 ```
 
 The `composer create-project` command passes ownership of all files to the

@@ -9,24 +9,24 @@
             "role": ""
         }
     ],
-    "repositories": [
-        {
+    "repositories": {
+        "drupal": {
             "type": "composer",
-            "url": "https://packagist.drupal-composer.org"
+            "url": "https://packages.drupal.org/8"
         },
-        {
+        "commerce_base": {
             "type": "vcs",
             "url": "https://github.com/drupalcommerce/commerce_base"
         }
-    ],
+    },
     "require": {
         "ext-curl": "*",
         "composer/installers": "^1.0.20",
         "drupal-composer/drupal-scaffold": "^2.0.1",
         "cweagans/composer-patches": "~1.0",
-        "drupal/core": "8.1.x-dev",
+        "drupal/core": "~8.1.0",
         "drupal/console": "~1.0",
-        "drupal/commerce": "8.2.x-dev",
+        "drupal/commerce": "2.x-dev",
         "drupalcommerce/commerce_base": "dev-8.x-1.x"
     },
     "require-dev": {
@@ -44,9 +44,9 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "autoload": {
-         "classmap": [
-             "scripts/composer/ScriptHandler.php"
-         ]
+        "classmap": [
+            "scripts/composer/ScriptHandler.php"
+        ]
     },
     "scripts": {
         "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
@@ -65,12 +65,24 @@
     },
     "extra": {
         "installer-paths": {
-            "web/core": ["type:drupal-core"],
-            "web/libraries/{$name}": ["type:drupal-library"],
-            "web/modules/contrib/{$name}": ["type:drupal-module"],
-            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
-            "web/themes/contrib/{$name}": ["type:drupal-theme"],
-            "drush/contrib/{$name}": ["type:drupal-drush"]
+            "web/core": [
+                "type:drupal-core"
+            ],
+            "web/libraries/{$name}": [
+                "type:drupal-library"
+            ],
+            "web/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "web/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "web/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "drush/contrib/{$name}": [
+                "type:drupal-drush"
+            ]
         }
     }
 }
