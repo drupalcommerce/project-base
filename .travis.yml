@@ -28,12 +28,12 @@ script:
   - if [[ $RELEASE = dev ]]; then composer --verbose require --no-update drupal/core:8.1.x-dev; fi;
   - if [[ $RELEASE = dev ]]; then composer --verbose update; fi;
   - cd $TRAVIS_BUILD_DIR/web
-  - ./../vendor/bin/drupal --version
-  - ./../vendor/bin/drupal init
-  - ./../vendor/bin/drupal site:install --db-type=sqlite --db-file=sites/default/files/.ht.sqlite --no-interaction
-  - ./../vendor/bin/drupal server 127.0.0.1:8080 &
+  - ./../bin/drupal --version
+  - ./../bin/drupal init
+  - ./../bin/drupal site:install --db-type=sqlite --db-file=sites/default/files/.ht.sqlite --no-interaction
+  - ./../bin/drupal server 127.0.0.1:8080 &
   - sleep 3
   # Skip core/tests/Drupal/Tests/ComposerIntegrationTest.php because web/ has no composer.json
   # Ignore PageCache group temporarily, @see https://www.drupal.org/node/2770673
-  - ./../vendor/bin/phpunit -c core --testsuite unit --exclude-group Composer,PageCache
-  - ./../vendor/bin/drupal
+  - ./../bin/phpunit -c core --testsuite unit --exclude-group Composer,PageCache
+  - ./../bin/drupal
