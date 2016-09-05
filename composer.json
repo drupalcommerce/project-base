@@ -19,6 +19,9 @@
             "url": "https://github.com/drupalcommerce/commerce_base"
         }
     },
+    "config": {
+      "bin-dir": "bin"
+    },
     "require": {
         "ext-curl": "*",
         "composer/installers": "^1.0.20",
