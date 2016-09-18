@@ -25,7 +25,7 @@ install:
   - composer --verbose install
 
 script:
-  - if [[ $RELEASE = dev ]]; then composer --verbose require --no-update drupal/core:8.1.x-dev; fi;
+  - if [[ $RELEASE = dev ]]; then composer --verbose require --no-update drupal/core:8.2.x-dev; fi;
   - if [[ $RELEASE = dev ]]; then composer --verbose update; fi;
   - cd $TRAVIS_BUILD_DIR/web
   - ./../bin/drupal --version
