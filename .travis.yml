@@ -35,5 +35,5 @@ script:
   - sleep 3
   # Skip core/tests/Drupal/Tests/ComposerIntegrationTest.php because web/ has no composer.json
   # Ignore PageCache group temporarily, @see https://www.drupal.org/node/2770673
-  - ./../bin/phpunit -c core --testsuite unit --exclude-group Composer,PageCache
+  - ./../bin/phpunit -c core --testsuite unit --exclude-group Composer,DependencyInjection,PageCache
   - ./../bin/drupal
