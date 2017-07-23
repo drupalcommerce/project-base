@@ -30,8 +30,8 @@
         "drupal-composer/drupal-scaffold": "^2.2",
         "drupal/console": "~1.0",
         "drupal/core": "~8.3.0",
-        "drupal/commerce": "2.x-dev",
-        "drupal/swiftmailer": "1.x-dev",
+        "drupal/commerce": "~2.0",
+        "drupal/swiftmailer": "~1.0",
         "drupalcommerce/commerce_base": "dev-8.x-1.x",
         "webflo/drupal-finder": "^0.3.0",
         "webmozart/path-util": "^2.3"
