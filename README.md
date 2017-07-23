@@ -1,7 +1,5 @@
 # Commerce 2.x project template
 
-[![Build Status](https://travis-ci.org/drupalcommerce/project-base.svg?branch=8.x)](https://travis-ci.org/drupalcommerce/project-base)
-
 Use [Composer](https://getcomposer.org/) to get Drupal + Commerce 2.x with all dependencies.
 
 Based on [drupal-composer/drupal-project](https://github.com/drupal-composer/drupal-project).
