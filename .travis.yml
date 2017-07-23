@@ -1,10 +1,11 @@
 language: php
+dist: trusty
+sudo: false
+
 php:
-  - 5.5
   - 5.6
   - 7.0
-
-sudo: false
+  - 7.1
 
 env:
   global:
@@ -25,14 +26,14 @@ install:
   - composer --verbose install
 
 script:
-  - if [[ $RELEASE = dev ]]; then composer --verbose require --no-update drupal/core:8.2.x-dev; fi;
+  - if [[ $RELEASE = dev ]]; then composer --verbose require --no-update drupal/core:8.4.x-dev; fi;
   - if [[ $RELEASE = dev ]]; then composer --verbose update; fi;
   - cd $TRAVIS_BUILD_DIR/web
   - ./../bin/drupal --version
   - ./../bin/drupal init
   - ./../bin/drupal site:install --db-type=sqlite --db-file=sites/default/files/.ht.sqlite --no-interaction
-  - ./../bin/drupal server 127.0.0.1:8080 &
-  - sleep 3
+  - ./../bin/drupal server $SIMPLETEST_BASE_URL &
+  - until curl -s $SIMPLETEST_BASE_URL; do true; done > /dev/null
   # Skip core/tests/Drupal/Tests/ComposerIntegrationTest.php because web/ has no composer.json
   # Ignore PageCache group temporarily, @see https://www.drupal.org/node/2770673
   - ./../bin/phpunit -c core --testsuite unit --exclude-group Composer,DependencyInjection,PageCache

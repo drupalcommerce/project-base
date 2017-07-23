@@ -38,7 +38,7 @@ all files not excluded by the .gitignore file.
 * Theme (packages of type `drupal-theme`) are placed in `web/themes/contrib/`
 * Profiles (packages of type `drupal-profile`) are placed in `web/profiles/contrib/`
 * Creates default writable versions of `settings.php` and `services.yml`.
-* Creates the `sites/default/files` directory.
+* Creates the `web/sites/default/files` directory.
 * Latest version of DrupalConsole is installed locally for use at `bin/drupal`.
 
 ## Updating Drupal Core
