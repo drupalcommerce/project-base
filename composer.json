@@ -30,7 +30,7 @@
         "drupal-composer/drupal-scaffold": "^2.2",
         "drupal/admin_toolbar": "~1.0",
         "drupal/console": "~1.0",
-        "drupal/core": "~8.3.0",
+        "drupal/core": "~8.4",
         "drupal/commerce": "~2.0",
         "drupal/search_api": "~1.0",
         "drupal/swiftmailer": "~1.0",
