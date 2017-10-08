@@ -80,6 +80,18 @@
             "web/libraries/{$name}": [
                 "type:drupal-library"
             ],
+            "web/modules/commerce_core_modules/{$name}": [
+                "drupal/address",
+                "drupal/commerce",
+                "drupal/entity",
+                "drupal/entity_reference_revisions",
+                "drupal/inline_entity_form",
+                "drupal/mailsystem",
+                "drupal/profile",
+                "drupal/search_api",
+                "drupal/state_machine",
+                "drupal/swiftmailer"
+            ],
             "web/modules/contrib/{$name}": [
                 "type:drupal-module"
             ],
