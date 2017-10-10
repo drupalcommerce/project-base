@@ -31,7 +31,8 @@ all files not excluded by the `.gitignore` file:
 
 ```
 git init
-git commit -a -m "Initial commit"
+git add .
+git commit -m "Initial commit"
 ```
 
 ## What does the template do?
