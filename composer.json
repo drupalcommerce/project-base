@@ -34,6 +34,7 @@
         "drupal/commerce": "~2.0",
         "drupal/search_api": "~1.0",
         "drupal/swiftmailer": "~1.0",
+        "drupal/token": "~1.0",
         "drupalcommerce/commerce_base": "dev-8.x-1.x",
         "webflo/drupal-finder": "^0.3.0",
         "webmozart/path-util": "^2.3"
