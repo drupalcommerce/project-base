@@ -36,7 +36,7 @@
         "drupal/swiftmailer": "~1.0",
         "drupal/token": "~1.0",
         "drupalcommerce/commerce_base": "dev-8.x-1.x",
-        "webflo/drupal-finder": "^0.3.0",
+        "webflo/drupal-finder": "^1.0",
         "webmozart/path-util": "^2.3"
     },
     "require-dev": {
