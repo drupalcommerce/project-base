@@ -115,9 +115,9 @@ section of composer.json:
 }
 ```
 
-### How can I add libraries using composer.json?
+### How can I add js/css libraries using composer.json?
 
-It is possible to use libraries with composer thanks to the
+It is possible to use frontend libraries with composer thanks to the
 asset-packagist repository (https://asset-packagist.org/).
 
 For example, to use colorbox:
@@ -132,7 +132,7 @@ When managing libraries with composer this way, you may not want to add it to
 version control. In that case, add specific directories to the .gitignore file.
 ```
 # Specific libraries (which we manage with composer)
-docroot/libraries/colorbox
+web/libraries/colorbox
 ```
 
 For more details, see https://asset-packagist.org/site/about
