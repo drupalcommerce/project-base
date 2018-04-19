@@ -98,6 +98,7 @@
             "drush/contrib/{$name}": [
                 "type:drupal-drush"
             ]
-        }
+        },
+        "composer-exit-on-patch-failure": true,
     }
 }
