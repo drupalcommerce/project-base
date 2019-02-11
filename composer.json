@@ -36,6 +36,7 @@
         "drupal/console": "^1.0.2",
         "drupal/core": "^8.6.0",
         "drupal/commerce": "~2.0",
+        "drush/drush": "^9.0.0",
         "drupal/search_api": "~1.0",
         "drupal/swiftmailer": "~1.0",
         "drupal/token": "~1.0",
