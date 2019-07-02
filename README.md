@@ -15,7 +15,7 @@ for your setup.
 After that you can create the project:
 
 ```
-composer create-project drupalcommerce/project-base some-dir --stability dev --no-interaction
+composer create-project drupalcommerce/project-base some-dir --no-interaction
 ```
 
 Done! Use `composer require ...` to download additional modules and themes:
@@ -50,7 +50,7 @@ new release of Drupal core.
 
 Follow the steps below to update your core files.
 
-1. Run `composer update drupal/core webflo/drupal-core-require-dev symfony/* --with-dependencies` to update Drupal Core and its dependencies.
+1. Run `composer update drupal/core webflo/drupal-core-require-dev "symfony/*" --with-dependencies` to update Drupal Core and its dependencies.
 1. Run `git diff` to determine if any of the scaffolding files have changed.
    Review the files for any changes and restore any customizations to
   `.htaccess` or `robots.txt`.
