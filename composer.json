@@ -28,13 +28,14 @@
         "sort-packages": true
     },
     "require": {
+        "php": ">=7.0.8",
         "ext-curl": "*",
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6.5",
         "drupal-composer/drupal-scaffold": "^2.5",
         "drupal/admin_toolbar": "~1.0",
         "drupal/console": "^1.0.2",
-        "drupal/core": "^8.6.0",
+        "drupal/core": "^8.7.0",
         "drupal/commerce": "~2.0",
         "drupal/search_api": "~1.0",
         "drupal/swiftmailer": "~1.0",
@@ -46,7 +47,7 @@
         "zaporylie/composer-drupal-optimizations": "^1.0"
     },
     "require-dev": {
-        "webflo/drupal-core-require-dev": "^8.6.0"
+        "webflo/drupal-core-require-dev": "^8.7.0"
     },
     "conflict": {
         "drupal/drupal": "*"
