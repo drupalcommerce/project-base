@@ -15,7 +15,7 @@ for your setup.
 After that you can create the project:
 
 ```
-composer create-project drupalcommerce/project-base some-dir --no-interaction
+composer create-project drupalcommerce/project-base some-dir ---stability dev --no-interaction
 ```
 
 Done! Use `composer require ...` to download additional modules and themes:
