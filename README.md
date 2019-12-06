@@ -1,8 +1,9 @@
 # Commerce 2.x project template
 
-Use [Composer](https://getcomposer.org/) to get Drupal + Commerce 2.x with all dependencies.
+Use [Composer](https://getcomposer.org/) to get Drupal + Commerce 2.x.
 
-Based on [drupal-composer/drupal-project](https://github.com/drupal-composer/drupal-project).
+Also look at [drupalcommerce/demo-project](https://github.com/drupalcommerce/demo-project)
+for a version with demo content.
 
 ## Usage
 
