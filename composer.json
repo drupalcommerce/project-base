@@ -37,7 +37,7 @@
         "drupal/core-composer-scaffold": "^8.8.0",
         "drupal/commerce": "^2.0",
         "drupal/search_api": "^1.0",
-        "drupal/swiftmailer": "^1.0",
+        "drupal/swiftmailer": "^2.0",
         "drupal/token": "^1.0",
         "drupalcommerce/commerce_base": "dev-8.x-1.x",
         "oomphinc/composer-installers-extender": "^1.1",
