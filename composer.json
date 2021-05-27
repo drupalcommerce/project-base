@@ -28,25 +28,25 @@
         "sort-packages": true
     },
     "require": {
-        "php": ">=7.1",
+        "php": ">=7.3",
         "ext-curl": "*",
-        "composer/installers": "^1.2",
-        "cweagans/composer-patches": "^1.6.5",
-        "drupal/core": "^8.9.0",
-        "drupal/core-composer-scaffold": "^8.9.0",
-        "drupal/commerce": "^2.0",
-        "drupal/search_api": "^1.0",
+        "composer/installers": "^1.9",
+        "cweagans/composer-patches": "^1.7",
+        "drupal/core": "^9.1",
+        "drupal/core-composer-scaffold": "^9.1",
+        "drupal/commerce": "^2.24",
+        "drupal/search_api": "^1.19",
         "drupal/swiftmailer": "^2.0",
-        "drupal/token": "^1.0",
-        "drupalcommerce/commerce_base": "dev-8.x-1.x",
-        "drush/drush": "^9.7.1 | ^10.0.0",
-        "oomphinc/composer-installers-extender": "^2.0",
-        "webflo/drupal-finder": "^1.0.0",
+        "drupal/token": "^1.9",
+        "drupalcommerce/commerce_base": "9.x-dev",
+        "drush/drush": "^10.3",
+        "vlucas/phpdotenv": "^5.1",
+        "webflo/drupal-finder": "^1.2",
         "webmozart/path-util": "^2.3"
     },
     "require-dev": {
-        "drupal/core-dev": "^8.9.0",
-        "zaporylie/composer-drupal-optimizations": "^1.1"
+        "drupal/core-dev": "^9.1",
+        "zaporylie/composer-drupal-optimizations": "^1.2"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -56,7 +56,8 @@
     "autoload": {
         "classmap": [
             "scripts/composer/ScriptHandler.php"
-        ]
+        ],
+        "files": ["load.environment.php"]
     },
     "scripts": {
         "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
@@ -88,9 +89,7 @@
             "npm-asset"
         ],
         "installer-paths": {
-            "web/core": [
-                "type:drupal-core"
-            ],
+            "web/core": ["type:drupal-core"],
             "web/libraries/{$name}": [
                 "type:drupal-library",
                 "type:bower-asset",
