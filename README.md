@@ -28,7 +28,13 @@ composer require "drupal/devel:1.x-dev"
 
 The `composer create-project` command passes ownership of all files to the
 project that is created. You should create a new git repository, and commit
-all files not excluded by the .gitignore file.
+all files not excluded by the `.gitignore` file:
+
+```
+git init
+git add .
+git commit -m "Initial commit"
+```
 
 ## What does the template do?
 
