@@ -36,7 +36,7 @@
         "drupal/core-composer-scaffold": "^9.1",
         "drupal/commerce": "^2.24",
         "drupal/search_api": "^1.19",
-        "drupal/swiftmailer": "^2.0",
+        "drupal/symfony_mailer": "^1.0@alpha",
         "drupal/token": "^1.9",
         "drupalcommerce/commerce_base": "9.x-dev",
         "drush/drush": "^10.3",
