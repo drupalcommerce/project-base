@@ -17,10 +17,6 @@
         "commerce_base": {
             "type": "vcs",
             "url": "https://github.com/drupalcommerce/commerce_base"
-        },
-        "asset-packagist": {
-            "type": "composer",
-            "url": "https://asset-packagist.org"
         }
     },
     "config": {
