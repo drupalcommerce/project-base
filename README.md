@@ -117,25 +117,7 @@ section of composer.json:
 
 ### How can I add js/css libraries using composer.json?
 
-It is possible to use frontend libraries with composer thanks to the
-asset-packagist repository (https://asset-packagist.org/).
-
-For example, to use colorbox:
-```
-composer require npm-asset/colorbox:"^0.4"
-
-```
-Composer will detect new versions of the library that meet your constraints.
-In the above example it will download anything from 0.4.* series of colorbox.
-
-When managing libraries with composer this way, you may not want to add it to
-version control. In that case, add specific directories to the .gitignore file.
-```
-# Specific libraries (which we manage with composer)
-web/libraries/colorbox
-```
-
-For more details, see https://asset-packagist.org/site/about
+It is possible to install JavaScript libraries with Composer using custom packages as this project does. We previously relied on asset-packagist to do this but had to change our approach after the repository went defunct. Refer to [this tutorial](https://ryanszrama.com/blog/04-18-2022/replace-asset-packagist-custom-package-repositories) for more information.
 
 ### How do I specify a PHP version ?
 
