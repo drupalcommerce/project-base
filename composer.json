@@ -79,18 +79,12 @@
                 "web-root": "web/"
             }
         },
-        "installer-types": [
-            "bower-asset",
-            "npm-asset"
-        ],
         "installer-paths": {
             "web/core": [
                 "type:drupal-core"
             ],
             "web/libraries/{$name}": [
-                "type:drupal-library",
-                "type:bower-asset",
-                "type:npm-asset"
+                "type:drupal-library"
             ],
             "web/modules/contrib/{$name}": [
                 "type:drupal-module"
