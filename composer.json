@@ -69,6 +69,10 @@
             "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
         ]
     },
+    "replace": {
+        "bower-asset/jquery": "3.2.1",
+        "npm-asset/jquery": "3.2.1"
+    },
     "extra": {
         "composer-exit-on-patch-failure": true,
         "patchLevel": {
