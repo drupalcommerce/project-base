@@ -31,14 +31,17 @@ project that is created. You should create a new git repository, and commit
 all files not excluded by the .gitignore file.
 
 ## What does the template do?
-
-* Drupal is installed in the `web` directory.
-* Modules (packages of type `drupal-module`) are placed in `web/modules/contrib/`
-* Theme (packages of type `drupal-theme`) are placed in `web/themes/contrib/`
-* Profiles (packages of type `drupal-profile`) are placed in `web/profiles/contrib/`
+-
+* Drupal will be installed in the `web`-directory.
+* Autoloader is implemented to use the generated composer autoloader in `vendor/autoload.php`,
+  instead of the one provided by Drupal (`web/vendor/autoload.php`).
+* Modules (packages of type `drupal-module`) will be placed in `web/modules/contrib/`
+* Theme (packages of type `drupal-theme`) will be placed in `web/themes/contrib/`
+* Profiles (packages of type `drupal-profile`) will be placed in `web/profiles/contrib/`
 * Creates default writable versions of `settings.php` and `services.yml`.
-* Creates the `web/sites/default/files` directory.
-* Latest version of DrupalConsole is installed locally for use at `bin/drupal`.
+* Creates `web/sites/default/files`-directory.
+* Latest version of drush is installed locally for use at `vendor/bin/drush`.
+* Creates environment variables based on your .env file. See [.env.example](.env.example).
 
 ## Updating Drupal Core
 
@@ -119,16 +122,17 @@ section of composer.json:
 
 It is possible to install JavaScript libraries with Composer using custom packages as this project does. We previously relied on asset-packagist to do this but had to change our approach after the repository went defunct. Refer to [this tutorial](https://ryanszrama.com/blog/04-18-2022/replace-asset-packagist-custom-package-repositories) for more information.
 
-### How do I specify a PHP version ?
+### How do I specify a PHP version?
 
-This project supports PHP 7.1 as minimum version (see [Drupal 8 PHP requirements](https://www.drupal.org/docs/8/system-requirements/drupal-8-php-requirements)), however it's possible that a `composer update` will upgrade some package that will then require PHP 7.1+.
+This project supports PHP 8.1 as minimum version (see [Environment requirements of Drupal 10](https://www.drupal.org/docs/system-requirements/php-requirements)), however it's possible that a `composer update` will upgrade some package that will then require PHP 8.1+.
 
 To prevent this you can add this code to specify the PHP version you want to use in the `config` section of `composer.json`:
+
 ```json
 "config": {
     "sort-packages": true,
     "platform": {
-        "php": "7.1.21"
+        "php": "8.1.13"
     }
 },
 ```
