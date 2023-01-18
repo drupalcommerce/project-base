@@ -21,27 +21,35 @@
     },
     "config": {
         "bin-dir": "bin",
-        "sort-packages": true
+        "discard-changes": true,
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/installers": true,
+            "cweagans/composer-patches": true,
+            "drupal/core-composer-scaffold": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "phpstan/extension-installer": true
+        }
     },
     "require": {
-        "php": ">=7.3",
+        "php": ">=8.1.0",
         "ext-curl": "*",
-        "composer/installers": "^1.9",
+        "composer/installers": "^2.1",
         "cweagans/composer-patches": "^1.7",
-        "drupal/core": "^9.1",
-        "drupal/core-composer-scaffold": "^9.1",
-        "drupal/commerce": "^2.24",
-        "drupal/search_api": "^1.19",
-        "drupal/symfony_mailer": "^1.0@alpha",
-        "drupal/token": "^1.9",
-        "drupalcommerce/commerce_base": "9.x-dev",
-        "drush/drush": "^10.3",
+        "drupal/core": "^10",
+        "drupal/core-composer-scaffold": "^10",
+        "drupal/commerce": "^2.32",
+        "drupal/search_api": "^1.28",
+        "drupal/symfony_mailer": "^1.0@beta",
+        "drupal/token": "^1.11",
+        "drupalcommerce/commerce_base": "10.x-dev",
+        "drush/drush": "^11.4",
         "vlucas/phpdotenv": "^5.1",
         "webflo/drupal-finder": "^1.2",
         "webmozart/path-util": "^2.3"
     },
     "require-dev": {
-        "drupal/core-dev": "^9.1",
+        "drupal/core-dev": "^10",
         "zaporylie/composer-drupal-optimizations": "^1.2"
     },
     "conflict": {
