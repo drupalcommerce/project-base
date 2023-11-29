@@ -46,12 +46,10 @@
         "drupalcommerce/commerce_base": "10.x-dev",
         "drush/drush": "^11.4",
         "vlucas/phpdotenv": "^5.1",
-        "webflo/drupal-finder": "^1.2",
-        "webmozart/path-util": "^2.3"
+        "webflo/drupal-finder": "^1.2"
     },
     "require-dev": {
-        "drupal/core-dev": "^10",
-        "zaporylie/composer-drupal-optimizations": "^1.2"
+        "drupal/core-dev": "^10"
     },
     "conflict": {
         "drupal/drupal": "*"
